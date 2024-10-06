@@ -1,27 +1,30 @@
-name: Build and Deploy React App
+name: Build and Deploy React App to GitHub Pages
 
 on:
   push:
     branches:
-      - master # Trigger the workflow on push to the main branch
+      - master # Run workflow on push to the 'main' branch
+
+permission:
+  content: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout the repository
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - name: Set up Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: "16" # Use the desired Node.js version
+          node-version: "16" # Specify the Node.js version
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build React app
+      - name: Build the React app
         run: npm run build
 
       - name: Deploy to GitHub Pages
@@ -29,3 +32,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
+          cname: your-custom-domain.com # Optional: Remove if not using a custom domain
