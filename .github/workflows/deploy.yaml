@@ -5,8 +5,8 @@ on:
     branches:
       - master # Run workflow on push to the 'main' branch
 
-permission:
-  content: write
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -26,8 +26,6 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-          cname: your-custom-domain.com # Optional: Remove if not using a custom domain
+          folder: build # The folder the action should deploy.
