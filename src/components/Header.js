@@ -2,24 +2,10 @@ import React from 'react';
 import siteLogo from '../images/site-logo.svg';
 import topBarCross from '../images/topbar-cross-icon.svg';
 
-
 export default function Header() {
     return (
         <>
             <header className="header-section">
-                <div className="top-bar center-align" id="top-bar-ajax">
-                    <div className="header-wrapper">
-                        <div className="top-bar-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, distinctio.
-                            <a href="#">Learn More</a>
-                        </div>
-                    </div>
-                    <div className="top-bar-cross">
-                        <span>
-                            <img src={topBarCross} width="16" height="16" alt="Top bar" />
-                        </span>
-                    </div>
-                </div>
                 <div className="header-wrapper header-inner d-flex align-items-center justify-content-between">
                     <div className="left-header d-flex align-items-center">
                         <div className="header-logo logo">
@@ -30,28 +16,28 @@ export default function Header() {
                                 <div className="nav-container">
                                     <div className="header-nav">
                                         <ul>
-                                            <li><a href="#">Why Mongoose?</a></li>
+                                            <li><a>Why Mongoose?</a></li>
                                             <li className="menu-item current-menu-item mega-menu-platform have-mega-menu">
-                                                <a href="#">Platform</a>
+                                                <a>Platform</a>
                                             </li>
                                             <li className="menu-item-has-children">
-                                                <a href="#">Resources</a>
+                                                <a>Resources</a>
                                                 <ul className="sub-menu">
                                                     <li>
-                                                        <a href="#">Education</a>
+                                                        <a>Education</a>
                                                     </li>
                                                     <li>
-                                                        <a href="#">Forensics</a>
+                                                        <a>Forensics</a>
                                                     </li>
                                                     <li>
-                                                        <a href="#">Therapy</a>
+                                                        <a>Therapy</a>
                                                     </li>
                                                     <li>
-                                                        <a href="#">Medical</a>
+                                                        <a>Medical</a>
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li><a href="#">Plans</a></li>
+                                            <li><a>Plans</a></li>
                                         </ul>
                                     </div>
                                     <div className="header-btns desktop-hide">
@@ -65,8 +51,8 @@ export default function Header() {
                                             </div>
                                             <button className="top-search have-no-button-style"></button>
                                         </div>
-                                        <a href="#" className="button gray" title="Login">Login</a>
-                                        <a href="#" className="button" title="Book a Demo">Book a Demo</a>
+                                        <a className="button gray" title="Login">Login</a>
+                                        <a className="button" title="Book a Demo">Book a Demo</a>
                                     </div>
                                 </div>
                             </div>
