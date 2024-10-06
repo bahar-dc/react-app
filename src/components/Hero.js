@@ -21,7 +21,7 @@ class Hero extends Component {
         return(
             <div>
                 <h1>
-                    This is { this.state.title} and below is { this.state.belowtag}.
+                    This is updated Yaml file { this.state.title} and below is { this.state.belowtag}.
                   </h1>
                   <p>
                     An engagement platform made exclusively for
