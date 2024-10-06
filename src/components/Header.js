@@ -1,6 +1,5 @@
 import React from 'react';
 import siteLogo from '../images/site-logo.svg';
-import topBarCross from '../images/topbar-cross-icon.svg';
 
 export default function Header() {
     return (
